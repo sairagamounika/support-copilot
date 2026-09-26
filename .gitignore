@@ -5,3 +5,4 @@ __pycache__/
 data/index/
 logs/
 eval/results/latest.json
+INTERVIEW_NOTES.md
