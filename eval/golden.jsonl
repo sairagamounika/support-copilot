@@ -1,0 +1,18 @@
+{"question": "How does proration work when I upgrade my plan mid-cycle?", "expected_keywords": ["proration", "remaining days"], "gold_doc_ids": ["billing"], "notes": "Core billing concept; answer must explain the credit mechanism."}
+{"question": "What happens if my credit card payment fails?", "expected_keywords": ["retry", "grace period"], "gold_doc_ids": ["billing"], "notes": "Two retries then suspension; grace period wording matters."}
+{"question": "Do you offer net-30 payment terms?", "expected_keywords": ["net-30", "Enterprise"], "gold_doc_ids": ["billing"], "notes": "Enterprise-only term; tests precise recall of a short section."}
+{"question": "How do I reset my password if I can't sign in?", "expected_keywords": ["Forgot password", "60 minutes"], "gold_doc_ids": ["password-reset"], "notes": "Link expiry is the key fact."}
+{"question": "What are the password requirements for a new password?", "expected_keywords": ["12 characters", "special character"], "gold_doc_ids": ["password-reset"], "notes": "Exact policy details."}
+{"question": "What are the API rate limits?", "expected_keywords": ["1,000 requests per minute", "429"], "gold_doc_ids": ["api-rate-limits"], "notes": "Headline numbers every integrator asks about."}
+{"question": "What should I do when I get a 429 Too Many Requests response?", "expected_keywords": ["Retry-After", "exponential backoff"], "gold_doc_ids": ["api-rate-limits"], "notes": "Actionable guidance, not just the limit number."}
+{"question": "How do I set up SSO with Okta using SAML?", "expected_keywords": ["SAML 2.0", "ACS URL"], "gold_doc_ids": ["sso-saml"], "notes": "Multi-step howto; ACS URL is the easily-missed step."}
+{"question": "What causes 'Invalid signature' errors during SAML setup?", "expected_keywords": ["certificate", "metadata"], "gold_doc_ids": ["sso-saml"], "notes": "Troubleshooting depth beyond the happy path."}
+{"question": "How can I export my shipment data?", "expected_keywords": ["CSV", "JSON"], "gold_doc_ids": ["data-export"], "notes": "Format options are the core answer."}
+{"question": "How long are generated export files kept?", "expected_keywords": ["14 days"], "gold_doc_ids": ["data-export"], "notes": "Short retention fact; easy to hallucinate, good abstention-adjacent test."}
+{"question": "What is the refund policy for monthly plans?", "expected_keywords": ["14 days", "10%"], "gold_doc_ids": ["refunds"], "notes": "Two numbers that must both be right."}
+{"question": "How many times do you retry a failed webhook delivery?", "expected_keywords": ["5 attempts", "dead-letter queue"], "gold_doc_ids": ["webhook-retries"], "notes": "Retry schedule is the heart of this doc."}
+{"question": "How do I verify that a webhook really came from ParcelPilot?", "expected_keywords": ["HMAC-SHA256", "X-ParcelPilot-Signature"], "gold_doc_ids": ["webhook-retries"], "notes": "Security-critical; exact header name matters."}
+{"question": "What uptime does the Growth plan guarantee?", "expected_keywords": ["99.9%", "43 minutes"], "gold_doc_ids": ["sla-uptime"], "notes": "SLA numbers must be exact."}
+{"question": "How do I claim SLA service credits?", "expected_keywords": ["30 days", "support ticket"], "gold_doc_ids": ["sla-uptime"], "notes": "Process question; claim window is the key fact."}
+{"question": "What's the difference between the Operator and Manager roles?", "expected_keywords": ["webhooks", "API keys"], "gold_doc_ids": ["roles-permissions"], "notes": "Comparison question; Manager-only permissions are the answer."}
+{"question": "What does a ParcelPilot tracking number look like?", "expected_keywords": ["PP", "10 digits"], "gold_doc_ids": ["tracking-numbers"], "notes": "Format question with a concrete example in the doc."}

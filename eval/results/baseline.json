@@ -1,0 +1,12 @@
+{
+  "n_answerable": 18,
+  "n_unanswerable": 8,
+  "retrieval_recall": 1.0,
+  "keyword_coverage": 0.8611,
+  "faithfulness": 1.0,
+  "answer_rate": 1.0,
+  "escalation_rate_unanswerable": 1.0,
+  "abstention_accuracy": 1.0,
+  "latency_p50_ms": 14.3,
+  "latency_p95_ms": 39.0
+}

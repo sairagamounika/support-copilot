@@ -1,0 +1,29 @@
+# Support Copilot configuration.
+# Tune these and re-run `python -m src.ingest` (chunking/embedding) or just
+# `python -m eval.run_eval` (retrieval/agent thresholds) to see the effect.
+
+embedding_model: all-MiniLM-L6-v2   # sentence-transformers model, downloaded once then cached
+
+# Chunking (sliding window over words)
+chunk_size: 120
+chunk_overlap: 30
+
+# Retrieval
+top_k: 4
+
+# Router confidence = w_top1 * top1_score + w_margin * margin(top1 - top2)
+#                     + w_overlap * IDF-weighted question/chunk word overlap.
+# Tuned on eval/ (grid search for best abstention accuracy); the regression
+# gate in eval/run_eval.py locks these in.
+confidence_threshold: 0.38
+confidence_top1_weight: 0.4
+confidence_margin_weight: 0.3
+confidence_overlap_weight: 0.5
+
+# Paths (relative to repo root)
+kb_dir: data/kb
+index_dir: data/index
+log_file: logs/decisions.jsonl
+
+# Mock LLM behaviour
+mock_max_sentences: 3               # how many chunk sentences the mock answer quotes

@@ -1,0 +1,27 @@
+name: eval
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build index
+        run: python -m src.ingest
+
+      - name: Unit tests
+        run: pytest -q
+
+      - name: Eval regression gate
+        run: python -m eval.run_eval
