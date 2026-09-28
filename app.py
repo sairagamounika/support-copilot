@@ -12,6 +12,8 @@ from pathlib import Path
 
 import gradio as gr
 
+import os
+
 from src.agent import SupportAgent
 from src.config import load_config
 from src.ingest import build_index
@@ -102,4 +104,9 @@ with gr.Blocks(title="ParcelPilot Support Copilot") as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch()
+    # Bind to 0.0.0.0 and respect the PORT env var so hosted platforms
+    # (Render, etc.) can route traffic to the app. Local runs are unaffected.
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=int(os.environ.get("PORT", 7860)),
+    )
