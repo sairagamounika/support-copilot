@@ -13,6 +13,10 @@ That's what makes this more than a demo.
 Runs **free and offline** after a one-time model download. No Pinecone, no
 API keys required.
 
+**Live demo:** [ParcelPilot Support Copilot](https://huggingface.co/spaces/dmounika1103/support-copilot-demo)
+— ask a question and see citations, confidence, and latency; try the wifi
+question to watch it refuse and draft an escalation ticket instead of guessing.
+
 ## Architecture
 
 ```
